@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>jojo内容分享</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .card h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .card p {
+            color: #666;
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+		.footer a{
+		
+            color: #fff;
+		}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 卡片1 -->
+        <div class="card">
+            <h2>linux常用命令</h2>
+            <p>ls - 列出目录内容</p>
+            <p>cd - 更改目录</p>
+            <p>pwd - 打印当前工作目录</p>
+            <p>mkdir - 创建目录</p>
+            <p>rm - 删除文件或目录</p>
+            <p>cp - 复制文件或目录</p>
+            <p>mv - 移动或重命名文件</p>
+            <p>touch - 更新文件访问和修改时间</p>
+            <p>cat - 显示文件内容</p>
+            <p>grep - 搜索文本</p>
+            <p>chmod - 改变文件权限</p>
+        </div>
+        
+        <!-- 卡片2 -->
+        <div class="card">
+            <h2>Linux proc 文件系统详解</h2>
+            <p>/proc 文件系统位于文件系统的根目录下，通常表现为 /proc 目录。这个目录包含了许多子目录和文件，它们代表了系统中的各种资源和状态信息。例如，每个正在运行的进程都会在 /proc 中有一个对应的子目录，其名称为该进程的 PID（进程标识符）。</p>
+        </div>
+        
+        <!-- 卡片3 -->
+        <div class="card">
+            <h2>DNS介绍</h2>
+            <p>DNS（Domain Name System）是互联网上的一项服务，它作为将域名和IP地址相互映射的一个分布式 数据库，能够使人更方便的访问互联网。
+
+        DNS系统使用的是网络的查询，那么自然需要有监听的port。DNS使用的是53端口，在/etc/services（搜索domain）这个文件中能看到。通常DNS是以UDP这个较快速的数据传输协议来查 询的，但是没有查询到完整的信息时，就会再次以TCP这个协议来重新查询。所以启动DNS时，会同时 启动TCP以及UDP的port53。 </p>
+        </div>
+    </div>
+    
+    <div class="footer">
+        备案号：<a  href="https://beian.miit.gov.cn/"  id="beian">豫ICP备2021035317号-1</a>
+    </div>
+</body>
+	 <script>
+	         var hostname = window.location.hostname;
+			 console.log(hostname)
+				 switch (hostname) {
+            case 'www.x-x-x.space':
+                document.title = '开发秘籍';
+                document.getElementById('beian').textContent = '豫ICP备2021035317号-2';
+                break;
+            case 'www.jojo-d.space':
+                document.title = 'jojo内容分享';
+                document.getElementById('beian').textContent = '豫ICP备2021035317号-1';
+                break;
+			default:
+                document.title = '本地';
+                document.getElementById('beian').textContent = '豫ICP备2021035317号';
+				break;
+				}
+	 </script>
+</html>
